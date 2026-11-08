@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A Little Light — For Vidhi</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#101b20;color:#f8edda;font-family:Georgia,serif}
+#experience{height:100svh;min-height:600px;position:relative;overflow:hidden;background:#b6c2c2}
+.scene{position:absolute;inset:0;display:none;overflow:hidden}
+.scene.active{display:block;animation:appear 1.2s}
+@keyframes appear{from{opacity:0}to{opacity:1}}
+.top{position:absolute;z-index:10;top:25px;left:25px;right:25px;
+ display:flex;justify-content:space-between;align-items:flex-start;
+ font-family:Arial,sans-serif;letter-spacing:2px;font-size:12px}
+.brand em{font-family:Georgia;font-size:26px;color:#eebc62;letter-spacing:0}
+.brand small{display:block;margin-top:8px;font-weight:bold}
+.sound{border:0;background:none;color:#fff;font-size:12px;letter-spacing:2px}
+.skip{position:absolute;z-index:10;right:27px;top:105px;color:#fff;
+ font:12px Arial;letter-spacing:1px;text-decoration:none}
+.skip span{color:#eebc62;font-size:20px}
+.copy{position:absolute;z-index:5;left:7%;right:7%;top:31%;
+ text-shadow:0 2px 15px #26343b}
+.eyebrow{font:12px Arial;letter-spacing:2px;color:#ffca65}
+h1{font-size:clamp(42px,10vw,68px);font-weight:normal;
+ line-height:1.05;color:#f2bd58;margin:18px 0}
+.intro{font-size:clamp(25px,6vw,37px);font-style:italic;line-height:1.3}
+.progress{position:absolute;bottom:35px;left:5%;display:flex;gap:12px;z-index:10}
+.progress i{display:block;width:48px;height:2px;background:#ffffff55}
+.progress i.on{background:#f2bd58}
+.sky{position:absolute;inset:0;background:linear-gradient(#c3d0d0 0%,#d5d0c7 57%,#355260 100%)}
+.building{position:absolute;bottom:20%;left:21%;width:55%;height:53%;
+ background:repeating-linear-gradient(to bottom,#858987 0 9%,#656f70 9.5% 10.5%);
+ border:5px solid #59676b;box-shadow:20px 10px 30px #172b3860;
+ transform:perspective(500px) rotateY(-5deg)}
+.building:before{content:"";position:absolute;top:-9%;left:8%;width:85%;height:9%;
+ background:#293a40;transform:skewY(-5deg)}
+.windows{position:absolute;inset:2%;display:grid;grid-template-columns:repeat(4,1fr);
+ grid-template-rows:repeat(8,1fr);gap:7px}
+.windows i{background:#253d49;border:3px solid #34434a}
+.windows i:nth-child(3n){background:#d4a95e;box-shadow:0 0 10px #ffc76b}
+.road{position:absolute;bottom:0;height:22%;width:100%;
+ background:linear-gradient(165deg,#304953,#14272b)}
+.groundlight{position:absolute;bottom:17%;left:10%;width:80%;height:2px;background:#d4b16b}
+.house{position:absolute;inset:0;background:linear-gradient(130deg,#987c62,#dfbd91 45%,#684c3b)}
+.house:after{content:"";position:absolute;inset:0;
+ background:linear-gradient(90deg,#0005,transparent 50%,#0003)}
+.facade{position:absolute;inset:15% 0 0;display:grid;
+ grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,1fr);gap:12px}
+.window{border:8px solid #191916;background:#f4a33d;
+ box-shadow:inset 0 0 35px #ffbd52;position:relative}
+.window:nth-child(2),.window:nth-child(3){background:#101923}
+.window:after{content:"";position:absolute;left:50%;top:0;bottom:0;width:6px;background:#171717}
+.balcony{position:absolute;left:0;right:0;top:47%;height:7px;background:#222}
+.lights{position:absolute;top:44%;left:0;right:0;display:flex;justify-content:space-around}
+.lights i{width:13px;height:13px;border-radius:50%;background:#ffd56d;
+ box-shadow:0 0 15px #ffbb38}
+.action{position:absolute;z-index:8;bottom:16%;left:6%;right:6%}
+.action h2{font-size:clamp(35px,8vw,55px);font-weight:normal;color:#f5c15d;margin:10px 0 30px}
+.action button{width:100%;max-width:360px;padding:23px 20px;border:0;
+ border-radius:50px;background:#ffc75d;color:#18232a;font: bold 14px Arial;
+ letter-spacing:2px}
+.diya{font-size:90px;filter:drop-shadow(0 0 25px orange);animation:flame 1.4s infinite alternate}
+@keyframes flame{to{transform:scale(1.08);filter:drop-shadow(0 0 35px gold)}}
+.final{background:radial-gradient(ellipse at center,#80502e,#241b20 70%,#101b20)}
+.final .copy{top:25%;text-align:center}
+.final h1{font-size:clamp(43px,11vw,72px)}
+.final p{font-size:19px;line-height:1.8}
+.final .diya{margin:25px}
+</style>
+</head>
+<body>
+<div id="experience">
+
+<section class="scene active" id="one">
+ <div class="sky"></div>
+ <div class="building"><div class="windows">
+ <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+ <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+ <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+ <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+ </div></div>
+ <div class="road"></div><div class="groundlight"></div>
+ <div class="top"><div class="brand"><em>A Little Light</em><small>FOR VIDHI</small></div>
+ <button class="sound" onclick="toggleSound(this)">● SOUND OFF</button></div>
+ <a class="skip" href="#" onclick="showScene(3);return false">SKIP TO FINAL WISH <span>↗</span></a>
+ <div class="copy">
+ <div class="intro">Some evenings are a little more special.</div>
+ <h1>Tonight is one of them.</h1>
+ </div>
+ <div class="progress"><i class="on"></i><i></i><i></i></div>
+</section>
+
+<section class="scene" id="two">
+ <div class="house"></div>
+ <div class="facade">
+ <div class="window"></div><div class="window"></div>
+ <div class="window"></div><div class="window"></div>
+ <div class="window"></div><div class="window"></div>
+ </div>
+ <div class="balcony"></div>
+ <div class="lights"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+ <div class="top"><div class="brand"><em>A Little Light</em><small>FOR VIDHI</small></div>
+ <button class="sound" onclick="toggleSound(this)">● SOUND OFF</button></div>
+ <a class="skip" href="#" onclick="showScene(3);return false">SKIP TO FINAL WISH <span>↗</span></a>
+ <div class="action">
+ <div class="eyebrow">A LITTLE LIGHT CAN CHANGE EVERYTHING.</div>
+ <h2>The diya is waiting.</h2>
+ <button onclick="showScene(3)">LIGHT THE DIYA　 ✦</button>
+ </div>
+ <div class="progress"><i></i><i class="on"></i><i></i></div>
+</section>
+
+<section class="scene final" id="three">
+ <div class="top"><div class="brand"><em>A Little Light</em><small>FOR VIDHI</small></div>
+ <button class="sound" onclick="toggleSound(this)">● SOUND OFF</button></div>
+ <div class="copy">
+ <div class="diya">🪔</div>
+ <div class="eyebrow">A WISH, FROM THE HEART</div>
+ <h1>Happy Diwali, Vidhi.</h1>
+ <p>May your life glow with happiness,<br>
+ may your dreams shine brighter every day,<br>
+ and may every new beginning bring<br>
+ something beautiful your way.</p>
+ <p>Keep smiling. Keep shining. ✨</p>
+ <div style="color:#f5c15d;font-size:20px">With lots of love ❤️</div>
+ <button style="margin-top:30px;border:0;border-radius:30px;padding:15px 25px;background:#ffc75d"
+ onclick="showScene(1)">REPLAY THE MAGIC ↻</button>
+ </div>
+ <div class="progress"><i></i><i></i><i class="on"></i></div>
+</section>
+</div>
+<script>
+let sound=false;
+function showScene(n){
+ document.querySelectorAll('.scene').forEach(s=>s.classList.remove('active'));
+ document.getElementById(['one','two','three'][n-1]).classList.add('active');
+}
+function toggleSound(button){
+ sound=!sound;
+ document.querySelectorAll('.sound').forEach(b=>b.textContent=sound?'● SOUND ON':'● SOUND OFF');
+}
+</script>
+</body>
+</html>
